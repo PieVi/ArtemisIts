@@ -29,3 +29,12 @@ def createAdjacencyListFromFile(filename):
 
 def sortedByPriority(entries):
     return sorted(entries, key = lambda x : x.priority)
+
+def writeCsvFile(entries):
+    with open('result.csv', 'w') as f:
+        fieldnames = ['object_id', 'priority', 'distance', 'tier', 'attempts', 'hosr']
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for entry in entries:
+            writer.writerow(entry.__dict__)
+
