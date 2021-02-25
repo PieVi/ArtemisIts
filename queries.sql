@@ -28,3 +28,11 @@ WHERE EmpId IN (
 SELECT Salary FROM EmployeesSalary
 ORDER BY Salary
 LIMIT 1 OFFSET 4;
+
+-- Question 6
+SELECT ManagerId, NumEmployees FROM (
+    SELECT ManagerId, COUNT(*) as NumEmployees
+    FROM EmployeeDetails
+    GROUP BY ManagerId
+) x
+WHERE NumEmployees >= 3;
