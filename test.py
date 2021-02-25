@@ -26,3 +26,6 @@ def createAdjacencyListFromFile(filename):
             )
             entries.append(entry)
     return entries
+
+def sortedByPriority(entries):
+    return sorted(entries, key = lambda x : x.priority)
