@@ -26,7 +26,7 @@ WHERE EmpId IN (
 
 -- Question 5
 SELECT Salary FROM EmployeesSalary
-ORDER BY Salary
+ORDER BY Salary DESC
 LIMIT 1 OFFSET 4;
 
 -- Question 6
