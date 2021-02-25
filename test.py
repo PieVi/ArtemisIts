@@ -17,12 +17,12 @@ def createAdjacencyListFromFile(filename):
         reader = csv.DictReader(f)
         for row in reader:
             entry = Adjacency(
-                row['object_id'],
-                row['priority'],
-                row['distance'],
-                row['tier'],
-                row['attempts'],
-                row['hosr']
+                int(row['object_id']),
+                int(row['priority']),
+                int(row['distance']),
+                int(row['tier']),
+                int(row['attempts']),
+                float(row['hosr'])
             )
             entries.append(entry)
     return entries
