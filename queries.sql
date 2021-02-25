@@ -23,3 +23,8 @@ FROM EmployeeDetails
 WHERE EmpId IN (
     SELECT DISTINCT(ManagerId) From EmployeeDetails
 );
+
+-- Question 5
+SELECT Salary FROM EmployeesSalary
+ORDER BY Salary
+LIMIT 1 OFFSET 4;
